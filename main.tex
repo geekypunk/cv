@@ -1,0 +1,135 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.86]{geometry}
+
+\usepackage{hyperref}
+\definecolor{links}{HTML}{458B00}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+%\setlength{\hintscolumnwidth}{3cm}    					% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+\renewcommand*\namefont{\fontsize{20}{8}\selectfont}
+\renewcommand*\titlefont{\fontsize{10}{18}\selectfont}
+% personal data
+\firstname{Krishna Sasank}
+\familyname{Talasila}
+\title{kt466@cornell.edu}  
+%%\address{1023 E State St}{Ithaca,NY}    % optional, remove the line if not wanted
+%%\mobile{(607) 216 7215}                    % optional, remove the line if not wanted
+%% \phone{phone (optional)}                      % optional, remove the line if not wanted
+%% \fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{sasanktk@gmail.com}                      % optional, remove the line if not wanted
+\homepage{geekypunk.in}                % optional, remove the line if not wanted
+%% \extrainfo{additional information (optional)} % optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle\vspace{-10ex}
+\section{Experience}
+
+\cventry{2014-Present}{Member of Technical Staff}{Oracle America}{Santa Clara}{CA}
+ {
+\begin{itemize}%
+\item \textbf{Oracle Public Cloud}. Working with the teams involved engineering Oracle's public cloud platform technology such as Java as a Service (https://cloud.oracle.com/java) and Database as a Service (https://cloud.oracle.com/database).
+\item \textbf{WebLogic Server} infrastructure and messaging group. Load balancing in dynamic clusters, foreign JMS provider support, JMS 2.x spec implementation.
+\end{itemize}
+}
+
+\cventry{2013-2013}{Development Engineer}{Pramati Technologies}{Hyderabad}{India}
+ {Analysing GitHub social coding dynamics%
+\begin{itemize}%
+\item Designed and implemented an application which uses GitHub activities of various users and their public repositories to analyse the growth curve of the repositories and related user dynamics
+\item Developed algorithms and user behaviour patterns were to be inculcated in SocialTwist division of Pramati 
+\item Open-sourced code at GitHib : \href{https://github.com/geekypunk/GitHubTrends}{https://github.com/geekypunk/GitHubTrends}
+\end{itemize}
+}
+
+\cventry{2011--2012}{Software Engineer}{SAP Labs,Business objects division}{Bangalore}{India}{ Part of a team responsible for development of Search based business analytics engine on top of SAP HANA database appliance.
+\begin{itemize}%
+\item Coded some of the major features of the engine, which were a pivotal part of suggest and search workflow
+\item Co-authored an in-house patent pertaining to suggest-n-search workflow of the application 
+\item Was also briefly involved in the development of iOS client app for this engine
+\end{itemize}}
+
+
+
+\section{Education}
+\cventry{2013--Present}{MEng in Computer Science}{Cornell University}{Ithaca, NY}{}{ \textbf{Courses} :- Information Retrieval, Databases, Software Engineering, Scripting Languages, Large scale Information Systems, Cloud Computing, E-Commerce}
+\cventry{2007--2011}{B.Tech}{Indian Institute of Information Technology}{Allahabad,India}{B.Tech(Honors) in Information Technology}{ \textbf{Courses} :- Data structures and Algorithms,Information retrieval,Databases,Operating Systems}
+
+\section{Computer skills}
+\cvcomputer{Good}{Java}{Average}{C,C++}
+\cvcomputer{Passable}{Python, Javascript, Shell}{Exposure}{iOS,Android,HTML,CSS,\LaTeX}
+%\cvcomputer{Concepts}{Business Intelligence,Big Data}{}{}
+
+
+\section{Awards and Achievements}
+\cventry{August 2012}{Outstanding productivity by a newcomer}{SAP Labs}{Bangalore, India}{}{Work ethics and patent filing}
+\cventry{March 2006}{Bronze momento}{9th National Science Olympiad by SOF}{Hyderabad,India}{}{For securing a nationwide rank of 442}
+
+
+\section{Patents}
+\begin{itemize}
+\item  \textbf{Systems and methods for searching data structures of a database} \newline 
+Patent for search mechanisms used in building an "on-cloud" business analytics engine leveraging the capabilities of SAP HANA.  Users can perform freeform text searches on their data and derive useful insights. \href{https://www.google.com/patents/US20140201194?dq=sasank+krishna+talasila&hl=en&sa=X&ei=1uPSU7PKHJDuoASUv4LoDg&ved=0CBwQ6AEwAA}{Published location}.
+\end{itemize}
+
+\section{Personal/Academic projects}
+\begin{itemize}
+
+\item  \textbf{Extraction of demographical and interest patterns} of bloggers by crawling Amazon's \href{http://aws.amazon.com/datasets/41740}{CommonCorpus} data and \href{https://github.com/trivio/common_crawl_index}{URLIndex} . Used Python(for crawling object on Amazon S3),Java,MySQL and \href{http://code.google.com/p/maui-indexer/}{Maui} for topic extraction from text. GitHub location : \href{https://github.com/geekypunk/BloggerAnalytics}{https://github.com/geekypunk/BloggerAnalytics}. \vspace{3ex}
+\item  \textbf{Hadoop implementation of Google's PageRank algorithm} \newline  
+Done by performing two Map/Reduce jobs per iteration. The first job does pagerank distribution and aggregation based on outlinks. The second job takes care of danglinks links and random teleportation factor. Code in GitHub location : \href{https://github.com/geekypunk/PagerankHadoop} {https://github.com/geekypunk/PagerankHadoop}. \vspace{3ex}
+\item \textbf{Machine Learning Compute Engine} \newline  
+Building a "Compute as a Service" application to provide Machine learning algorithms on the cloud. Built to be fault-tolerant,highly available and reliable. Goal is to enable users to analyze their data using standard Machine Learning algorithms out of the box. So, instead of a user configuring an Amazon EC2 instance with his application code and running his algorithm, we will provide this solution through a simple and configurable dashboard. The user has to simply select the ML algorithm he wants to run through the dashboard, the data on which he wants to run the algorithm and the parameters (if any). The user does not have to write application code from the scratch. GitHub location : \href{https://github.com/geekypunk/elasticMLCompute} {https://github.com/geekypunk/elasticMLCompute}. \hspace{1ex}
+\end{itemize}
+
+%\section{Interests}
+%\cvcomputer{Academic}{InformationRetrieval,Datamining,Big Data}{Leisure}{WebDevelopment,UX Design}
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}   % 'publications' is the name of a BibTeX file
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
